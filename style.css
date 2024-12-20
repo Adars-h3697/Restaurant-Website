@@ -1,0 +1,500 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Section Styling */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: -3px 80px;
+    background: #f4f3f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+#navbar {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+#navbar li {
+    position: relative;
+}
+
+#navbar li a {
+    color: #333;
+    text-decoration: none;
+    padding: -7px 80px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#navbar li a:hover, #navbar li a.active {
+    color: #1c3db6;
+}
+
+.book-button {
+    background-color: #1c3db6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book-button:hover {
+    background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #fffefe;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        padding: 10px 20px;
+    }
+
+    .book-button {
+        padding: 6px 12px;
+    }
+}
+
+
+#hero {
+    background: url(../images/background.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: rgb(69, 39, 39);
+}
+
+
+
+
+
+.explorebutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #98756a;
+  border: none;
+  color: #282525;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 2px;
+  margin-bottom: 266%;
+}
+
+.explorebutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.explorebutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.explorebutton:hover span {
+  padding-right: 25px;
+}
+
+.explorebutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+/* Food Menu Section */
+#food-menu {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#food-menu .heading h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#food-menu .heading span {
+    color: seagreen;
+    font-weight: bold;
+}
+
+
+.shopcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.box {
+    flex: 1 1 30%;
+    max-width: 300px;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.menu-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.box h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 1rem 0 0.5rem;
+}
+
+.box p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.box span {
+    font-size: 1rem;
+    color: #1c3db6;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 100%;
+    }
+}
+
+#about {
+    padding: 50px 0;
+    background: #f5f5f7;
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #about h2 {
+    font-size: 2.3rem;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  #about .small {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+  }
+  .about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes about-img-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  .about-text {
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes about-text-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  .about-img img {
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  #contact {
+    padding: 5rem 0;
+    background: rgb(226, 226, 226);
+  }
+  
+  .contact-container {
+    display: flex;
+    background: #fff;
+  }
+  
+  .contact-img {
+    width: 50%;
+  }
+  
+  .contact-img img {
+    display: block;
+    height: 400px;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+  
+  .form-container {
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .form-container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    color: #444;
+    outline: none;
+    padding: 1rem 0;
+    resize: none;
+  }
+  
+  .form-container h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 1rem;
+    margin-top: -1.2rem;
+  }
+  
+  .form-container a {
+    font-size: 1.3rem;
+  }
+  
+  #footer h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2.6rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65, 65, 65);
+  }
+  
+  .shopcontainers {
+    display: flex; /* Aligns items horizontally */
+    gap: 98px; /* Adds space between boxes */
+    justify-content: center; /* Centers the boxes */
+    flex-wrap: wrap; /* Allows wrapping if there’s not enough space */
+}
+
+.box {
+    text-align: center; /* Centers text inside each box */
+    border: 1px solid #ddd; /* Optional: Add border for visual separation */
+    padding: 10px;
+    width: 200px; /* Set a fixed width for each box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contact Section Styling */
+#contact {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Image Styling */
+.contact-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the section */
+  z-index: 1;
+}
+
+/* Form Container Styling */
+.form-container {
+  position: relative;
+  z-index: 2; /* Ensure the form is above the image */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 628px;
+}
+
+/* Form Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  
+}
+
+/* Form Fields Styling */
+.form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+
+.social{
+  padding-left: 41%;
+  padding-top: 50px;
+}
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  
+  color: #3B5998;
+}
+
+/* Twitter */
+.fa-twitter {
+  
+  color:#3B5998;
+}
+
+.fa-instagram {
+  
+  color:#f34ab8 ;
+}
+
+.fa-linkedin {
+  
+  color: 55ACEE;
+}
+
