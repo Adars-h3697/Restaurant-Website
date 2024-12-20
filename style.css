@@ -87,7 +87,8 @@
 
 
 #hero {
-    background: url(../images/background.jpg) no-repeat center center;
+    background-image: url('images/background.jpg');
+
     background-size: cover;
     position: relative;
     min-height: 700px;
